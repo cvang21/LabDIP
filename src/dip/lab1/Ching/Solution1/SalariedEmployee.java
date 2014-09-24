@@ -6,11 +6,14 @@ package dip.lab1.Ching.Solution1;
  *
  * @author your name goes here
  */
-public class SalariedEmployee extends Employee {
+public class SalariedEmployee implements Employee {
 
-    /** default constructor. Is this the best way to go? */
-    public SalariedEmployee() {}
-
+//    /** default constructor. Is this the best way to go? */
+//    public SalariedEmployee() {}
+//    
+    private double annualSalary;
+    private double annualBonus;
+    
     /**
      * Convenience constructor. Is this the best way to go?
      * @param annualSalary - the employee's annual salary
@@ -21,5 +24,20 @@ public class SalariedEmployee extends Employee {
         setAnnualBonus(annualBonus);
     }
 
+    public double getAnnualWages() {
+        return annualSalary + annualBonus;
+    }
+
+    public double getAnnualBonus() {
+        return annualBonus;
+    }
+
+    public void setAnnualBonus(double annualBonus) {
+        this.annualBonus = annualBonus;
+    }
+
+    public void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
     
 }
