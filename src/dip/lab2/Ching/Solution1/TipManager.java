@@ -11,17 +11,15 @@ package dip.lab2.Ching.Solution1;
  */
 public class TipManager {
     
-    private double tip;
-
-    public TipManager(double tip) {
-        this.tip = tip;
+    private TipCalculator tipCalculator;
+    
+    public TipManager(TipCalculator tipCalculator) {
+        this.tipCalculator = tipCalculator;
     }
  
- 
-
-    public double getTip() {
-        
-        return tip;
+    public TipCalculator getTip() {
+      
+        return this.tipCalculator;
     }
     
     

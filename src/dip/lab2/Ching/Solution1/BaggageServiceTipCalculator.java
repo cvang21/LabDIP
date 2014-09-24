@@ -8,7 +8,7 @@ package dip.lab2.Ching.Solution1;
  *
  * @author your name goes here
  */
-public class BaggageServiceTipCalculator {
+public class BaggageServiceTipCalculator implements TipCalculator {
     private static final double MIN_BILL = 0.00;
     private static final double MAX_BILL = 100.00;
     private static final String BILL_ENTRY_ERR =
@@ -25,6 +25,11 @@ public class BaggageServiceTipCalculator {
 //    }
     private ServiceQuality serviceQuality;
 
+    @Override
+    public double getTip(){
+    return baseTipPerBag;
+    }
+    
     public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
         this.setServiceRating(q); // perform validation
         this.setBagCount(bags);

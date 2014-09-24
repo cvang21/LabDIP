@@ -24,9 +24,9 @@ public class Startup {
 //    };
  
     public static void main(String[] args) {
-        TipCalculator calc = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 120);        
-        TipManager mgr = new TipManager(calc);
-        double amt = mgr.getTip();
+        TipCalculator calc = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 2);        
+        TipManager tipMgr = new TipManager(calc);
+        double amt = tipMgr.getTip();
         System.out.println(amt);
     }
 
