@@ -24,10 +24,13 @@ public class Startup {
 //    };
  
     public static void main(String[] args) {
-        TipCalculator calc = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 2);        
-        TipManager tipMgr = new TipManager(calc);
-        double amt = tipMgr.getTip();
-        System.out.println(amt);
+        TipCalculator calc1 = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 2);        
+        TipCalculator calc2 = new FoodServiceTipCalculator(ServiceQuality.FAIR, 150.55);
+        double amt = calc1.getTip();
+        double amt2 = calc2.getTip();
+        System.out.println("Baggage Service Tip: " + amt);
+        System.out.println("Food Service Tip: " + amt2);
+        
     }
 
 }

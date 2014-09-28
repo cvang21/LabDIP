@@ -22,7 +22,10 @@ public class TipManager {
         return this.tipCalculator;
     }
     
-    
+    public void setTipCalculator (TipCalculator tipCalculator){
+       
+        this.tipCalculator = tipCalculator;
+    }
     
     
     
